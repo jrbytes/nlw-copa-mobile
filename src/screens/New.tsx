@@ -28,7 +28,7 @@ export function New() {
     try {
       setIsLoadingPoolCreate(true)
 
-      await api.post('/pools', { title })
+      await api.post('/pools', { title: titleTrimmed })
 
       toast.show({
         title: 'Bolão criado com sucesso!',
